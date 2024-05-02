@@ -1,3 +1,2 @@
 nltk==3.8.1
-model.pkl
-vectorizer.pkl
+streamlit==1.33.0
