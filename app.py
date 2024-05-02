@@ -9,7 +9,7 @@ nltk.download('punkt')
 # making an object of PorterStemmer
 ps = PorterStemmer()
 
-# function which transforms the text
+# function which transform the text
 def transform_text(text):
     # converting to lower case and tokenizing
     text = text.lower()
