@@ -15,7 +15,7 @@ def transform_text(text):
     text = nltk.word_tokenize(text)
     y = []
 
-    # checking for only alphanumeric words
+    # checking for only alphanumeric word
     for i in text:
         if i.isalnum():
             y.append(i)
@@ -48,10 +48,13 @@ if st.button('Predict'):
 
     # 1. preprocess
     transform_sms = transform_text(input_sms)
+
     # 2. vectorize
     vector_input = tfidf.transform([transform_sms])
+
     # 3. predict
     result = model.predict(vector_input)[0]
+
     # 4. Display
     if result == 1:
         st.header("Spam")
